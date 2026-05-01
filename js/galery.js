@@ -92,10 +92,11 @@ gallery.insertAdjacentHTML('beforeend', markup);
 gallery.addEventListener('click', onGalleryClick);
 
 function onGalleryClick(e) {
-  e.preventDefault();
 
   // перевірка що клікнули саме по img
   if (!e.target.classList.contains('gallery-image')) return;
+  
+   e.preventDefault();
 
   const largeImageURL = e.target.dataset.source;
 
